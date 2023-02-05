@@ -4,6 +4,7 @@ const MiniForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    email: "",
   });
 
   function handleChange(e) {
@@ -24,11 +25,22 @@ const MiniForm = () => {
         name="firstName"
         placeholder="First Name"
         onChange={handleChange}
+        value={formData.firstName}
       />
+      <br />
       <input
         type="text"
         name="lastName"
         placeholder="First Name"
+        onChange={handleChange}
+        value={formData.lastName}
+      />
+      <br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Email"
+        value={formData.email}
         onChange={handleChange}
       />
     </form>
